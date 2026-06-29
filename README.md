@@ -6,10 +6,10 @@ Master's thesis project — Vrije Universiteit Amsterdam, 2026.
 
 This repository contains code and figures for a cross-domain author profiling study on hate speech data. The goal is to predict the **gender** (M/F) and **age group** (0–25, 26–35, 36–65, 66+) of hate speech authors by comparing two approaches:
 
-- **Fine-tuned encoder models** (BERT, DistilBERT, HateBERT, RoBERTa) trained on PAN14 social media data
-- **Zero-shot LLMs** (LLaMA-3.1-8B, Qwen) prompted without any task-specific training
+- **Fine-tuned encoder models** (BERT, DistilBERT, HateBERT, RoBERTa) Finetuned on PAN14 social media data
+- **Zero-shot LLMs** (LLaMA-3.1-8B, Qwen) 
 
-Evaluation is performed on the English subset of the [LiLaH-HAG](https://github.com/clarinsi/LiLaH) dataset — a multilingual hate speech corpus annotated with author demographics.
+Evaluation is performed on the English subset of the [LiLaH-HAG] dataset — a hate speech corpus annotated with author demographics attributes.
 
 ## Repository Structure
 
@@ -31,12 +31,12 @@ scripts/            Data preparation and evaluation utilities
 | Gender | LLaMA-3.1-8B    | 0.515    |
 | Age    | BERT (PAN14)    | 0.310    |
 
-Fine-tuned BERT outperforms zero-shot LLMs on age prediction. LLMs show competitive gender prediction but exhibit systematic male-prediction bias. Neither approach reliably identifies the 66+ age group, reflecting severe underrepresentation in PAN14 training data (0.2% of training vs. 10.3% of test).
+
 
 ## Datasets
 
 - **Training**: PAN14 Author Profiling dataset (not included — available via [PAN @ CLEF](https://pan.webis.de/))
-- **Evaluation**: LiLaH-HAG English subset (not included — available via [CLARIN.SI](https://www.clarin.si/))
+- **Evaluation**: LiLaH-HAG English subset 
 
 Data files are excluded from this repository.
 

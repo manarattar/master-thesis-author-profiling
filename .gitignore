@@ -1,0 +1,64 @@
+# Model weights — large binary files
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Training checkpoints (intermediate, not final models)
+models/*/checkpoint-*/
+models/bert_pan14_outputs/
+models/bert_pan14_smoke/
+models/age_distilbert_model/checkpoint-*/
+
+# Large training data (PAN14 — 500MB+ each, not redistributable)
+data/pan14_prepared.csv
+data/pan14_prepared_with_reviews.csv
+data/pan14_colab.csv
+data/pan14_dataset/
+data/pan14-training-corpora-truth/
+
+# LiLaH data — not redistributable
+data/LILAH_data/
+data/lilah_prepared.csv
+data/hate_speech_only.tsv
+data/filtering_HS
+data/fewshot_examples*.csv
+data/fewshot_examples_lilah_nonhs.csv
+
+# Janes-Blog corpus — large files (154MB+ CSV, 199MB zip)
+data/janes_blog/janes_blog_gender.csv
+data/janes_blog/Janes-Blog.vert.zip
+
+# Blog Authorship Corpus — large files
+data/blog_corpus/blogs.zip
+data/blog_corpus/blog_gender.csv
+
+# LLM result CSVs containing raw LiLaH text
+LLM_code/llm_*checkpoint*.csv
+LLM_code/llm_*results*.csv
+LLM_code/llm_slovene_checkpoint.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Logs and temp files
+*.log
+nohup.out
+slovene_run.log
+
+# LaTeX build artifacts
+*.aux
+*.toc
+*.out
+*.log
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
